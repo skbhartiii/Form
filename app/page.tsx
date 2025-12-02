@@ -54,8 +54,8 @@ const Home = () => {
             <textarea
               id="message"
               required
-              rows={5}
-              className="w-full bg-gray-100 px-4 py-3 rounded outline-none  transition resize-none"
+              rows={4}
+              className="w-full bg-gray-100 px-4 py-3 rounded outline-none  transition"
               placeholder="Your message here..."
             />
           </div>
