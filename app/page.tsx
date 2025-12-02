@@ -1,49 +1,56 @@
-import Image from "next/image";
 
-export default function Home() {
+const Home = () => {
   return (
-    <div className="flex min-h-screen items-center justify-center bg-zinc-200 font-sans">
-      <div className="bg-white p-4 max-w-2xl w-full rounded">
-        <h2 className="text-black font-bold">GET IN TOUCH</h2>
-        <div className="flex flex-col items-center gap-5 mt-5">
+    <div className="flex min-h-screen items-center justify-center bg-gradient-to-br from-green-400 to-blue-500 font-sans">
+      <div className="bg-white p-16 max-w-2xl w-full rounded shadow-lg">
+        <h2 className="text-3xl font-bold  text-black mb-6">GET IN TOUCH</h2>
+        <div className="flex flex-col gap-6">
           <div className="grid grid-cols-2 gap-4 w-full">
             <div className="flex flex-col gap-2 w-full">
-              <label htmlFor="">Tell us your name</label>
+              <label htmlFor="name" className="font-medium text-gray-700">Tell us your name</label>
               <input
+                id="name"
                 type="text"
-                className="bg-gray-100 px-2 py-1 rounded"
+                className="bg-gray-100 px-3 py-2 rounded outline-none"
                 placeholder="Enter your name"
               />
             </div>
             <div className="flex flex-col gap-2 w-full">
-              <label htmlFor="">Enter your email</label>
+              <label htmlFor="email" className="font-medium text-gray-700">Enter your email</label>
               <input
-                type="text"
-                className="bg-gray-100 px-2 py-1 rounded"
+                id="email"
+                type="email"
+                className="bg-gray-100 px-3 py-2 rounded outline-none"
                 placeholder="Enter your email"
               />
             </div>
           </div>
           <div className="flex flex-col gap-2 w-full">
-            <label htmlFor="">Your website name</label>
+            <label htmlFor="website" className="font-medium text-gray-700">Your Website</label>
             <input
-              type="text"
-              className="bg-gray-100 px-2 py-1 rounded"
+              id="website"
+              type="url"
+              className="bg-gray-100 px-3 py-2 rounded outline-none"
               placeholder="http://"
             />
           </div>
           <div className="flex flex-col gap-2 w-full">
-            <label htmlFor="">Message</label>
+            <label htmlFor="message" className="font-medium text-gray-700">Message</label>
             <textarea
-              className="bg-gray-100 px-2 py-1 rounded"
+              id="message"
+              className="bg-gray-100 px-3 py-2 rounded outline-none"
               placeholder="Your message here"
+              rows={4}
             />
           </div>
-          <div>
-            <button className="text-white font-semibold py-2 px-4 rounded bg-gradient-to-r from-blue-400 to-green-400">SUBMIT</button>
+          <div className="flex justify-center">
+            <button className="text-white font-semibold py-3 px-6 rounded cursor-pointer bg-gradient-to-r from-green-400 to-blue-500">
+              SUBMIT
+            </button>
           </div>
         </div>
       </div>
     </div>
   );
 }
+export default Home;
